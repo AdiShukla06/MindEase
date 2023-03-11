@@ -1,0 +1,13 @@
+Fonts used in this design:
+
+Font: Satisfy
+Author: Sideshow
+Url: https://fonts.google.com/specimen/Satisfy
+
+Font: Abril Fatface
+Author: TypeTogether
+Url: https://fonts.google.com/specimen/Abril+Fatface
+
+Font: Lato
+Author: Łukasz Dziedzic
+Url: https://fonts.google.com/specimen/Lato
