@@ -1,0 +1,430 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindEase | Mental Wellness Made Easy</title>
+    <link
+      rel="shortcut icon"
+      href="/Logos/MindEase-removebg.png"
+      type="image/x-icon"
+    />
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-0GLJjKp//MZEV8fZq4+J2U5z6U5fW8Rqb0S5OpeEwjlJwdLQ2g0vZUJ+JfWy9cJ0Wg+IvCp7mHdAIOJb7DAbLg=="
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="consult.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <img src="/Logos/MindEase-removebg.png" alt="" />
+      </div>
+      <ul class="navbar__list">
+        <li class="navbar__item">
+          <a class="navbar__link" href="index.html">Home</a>
+        </li>
+        <li class="navbar__item"><a class="navbar__link" href="#">Blogs</a></li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="consult.html">Consult</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="dashboard.html">My Dashboard</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/signin.html">Account</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="consult-container">
+      <div class="question" id="question">
+        <p>What type of therapy are you looking for?</p>
+        <div class="buttons-consult">
+          <div class="btn-option">
+            <button id="individual-q1-btn">
+              <img src="/Images/consult/individual.png" alt="" />
+            </button>
+            <p style="font-size: 1.1em">Individual</p>
+            <p style="font-size: 0.8em; margin-top: 0.4em">(For myself)</p>
+          </div>
+          <div class="btn-option">
+            <button id="q1-btn">
+              <img src="/Images/consult/couple.png" alt="" />
+            </button>
+            <p style="font-size: 1.1em">Couple</p>
+            <p style="font-size: 0.8em; margin-top: 0.4em">
+              (For me & my partner)
+            </p>
+          </div>
+          <div class="btn-option">
+            <button id="q1-btn">
+              <img src="/Images/consult/teen.png" alt="" />
+            </button>
+            <p style="font-size: 1.1em">Teenager</p>
+            <p style="font-size: 0.8em; margin-top: 0.4em">
+              (For my teen child)
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- INDIVIDUAL QUESTIONNAIRE -->
+      <div class="individual-ques-box hidden" id="individual-ques-box">
+        <div class="individual-question hidden" id="ques1">
+          What is your Gender Identity?
+        </div>
+        <div class="individual-buttons hidden" id="individual-buttons">
+          <button class="gender_ques_btn">Man</button>
+          <button class="gender_ques_btn">Woman</button>
+          <button id="more-btn">More Options</button>
+          <button class="hidden gender_ques_btn more-options-btn">
+            Non Binary
+          </button>
+          <button class="hidden gender_ques_btn more-options-btn">
+            I don't know
+          </button>
+          <button class="hidden gender_ques_btn more-options-btn">
+            Prefer not to say
+          </button>
+          <button class="hidden gender_ques_btn more-options-btn">Other</button>
+        </div>
+
+        <div class="individual-question hidden" id="ques2">
+          How old are you?
+        </div>
+        <select class="hidden" id="age" name="age">
+          <option value="">Select your age</option>
+        </select>
+
+        <div class="individual-question hidden" id="ques3">
+          How do you identify?
+        </div>
+        <div class="individual-buttons hidden" id="identify-buttons">
+          <button id="straight" class="identify_ques_btn">Straight</button>
+          <button class="identify_ques_btn lgbtq-buttons">Gay</button>
+          <button class="identify_ques_btn lgbtq-buttons">Lesbian</button>
+          <button class="identify_ques_btn lgbtq-buttons">Bi/Pan</button>
+          <button class="identify_ques_btn lgbtq-buttons">
+            Prefer not to say
+          </button>
+          <button id="more-identify-btn">More Options</button>
+          <button
+          
+            class="hidden identify_ques_btn more-identify-options-btn lgbtq-buttons"
+          >
+            Queer
+          </button>
+          <button
+          
+            class="hidden identify_ques_btn more-identify-options-btn lgbtq-buttons"
+          >
+            Asexual
+          </button>
+          <button
+          
+            class="hidden identify_ques_btn more-identify-options-btn lgbtq-buttons"
+          >
+            I don't know
+          </button>
+          <button
+          
+            class="hidden identify_ques_btn more-identify-options-btn lgbtq-buttons"
+          >
+            Other
+          </button>
+        </div>
+
+        <div class="individual-question hidden" id="lgbtq-ques">
+          Would you like to be matched with a <br> therapist who specializes in LGBTQ+ issues?
+        </div>
+
+        <div class="individual-buttons hidden" id="lgbtq-choice">
+          <button class="lgbtq_ques_btn">No</button>
+          <button class="lgbtq_ques_btn">Yes</button>
+        </div>
+
+
+        <div class="individual-question hidden" id="relationship-ques">
+          What is your relationship status?
+        </div>
+        <div class="individual-buttons hidden" id="relationship-choice">
+          <button class="relationship_ques_btn">Single</button>
+          <button class="relationship_ques_btn">In a relationship</button>
+          <button class="relationship_ques_btn">Married</button>
+          <button class="relationship_ques_btn">Divorced</button>
+          <button class="relationship_ques_btn">Widowed</button>
+          <button class="relationship_ques_btn">Other</button>
+        </div>
+
+        <div class="individual-question hidden" id="reason-ques">
+          What brings you to therapy?
+        </div>
+        <div class="options hidden" id="options">
+          <div class="tickbox">
+          <input type="checkbox" name="anxiety" id="anxiety" class="options-check">
+          <label for="anxiety">Anxiety</label><br>
+          </div>
+          <div class="tickbox">
+          <input type="checkbox" name="depression" id="depression" class="options-check">
+          <label for="depression">Depression</label><br>
+        </div>
+          <div class="tickbox">
+          <input type="checkbox" name="relationship-issues" id="relationship-issues" class="options-check">
+          <label for="relationship-issues">Relationship issues</label><br>
+        </div>
+        <div class="tickbox">
+          <input type="checkbox" name="work-related-stress" id="work-related-stress" class="options-check">
+          <label for="work-related-stress">Work-related stress</label><br>
+        </div>
+          <div class="tickbox">
+          <input type="checkbox" name="trauma" id="trauma" class="options-check">
+          <label for="trauma">Trauma</label><br>
+        </div>
+        <div class="tickbox">
+          <input type="checkbox" name="grief-and-loss" id="grief-and-loss" class="options-check">
+          <label for="grief-and-loss">Grief and loss</label><br>
+        </div>
+          <div class="tickbox">
+          <input type="checkbox" name="identity-issues" id="identity-issues" class="options-check">
+          <label for="identity-issues">Identity issues</label><br>
+        </div>
+        <div class="tickbox">
+          <input type="checkbox" name="self-confidence" id="self-confidence" class="options-check">
+          <label for="self-confidence">I want to gain self confidence</label><br>
+        </div>
+        <div class="tickbox">
+          <input type="checkbox" name="other" id="other" class="options-check">
+          <label for="other">Other</label><br>
+        </div>
+        <button class="checkbox-btn" id="checkbox-btn">Next</button>
+
+        </div>
+
+        <div class="individual-question hidden" id="duration-ques">
+          How long have you been experiencing these symptoms?
+        </div>
+        <div class="individual-buttons hidden" id="duration-choice">
+          <button class="duration_ques_btn">Less than a month</button>
+          <button class="duration_ques_btn">1-3 months</button>
+          <button class="duration_ques_btn">3-6 months</button>
+          <button class="duration_ques_btn">6-12 months</button>
+          <button class="duration_ques_btn">More than a year</button>
+          
+        </div>
+
+        <div class="individual-question hidden" id="goals-ques">
+          What are your therapy goals?
+        </div>
+
+        <div class="options hidden" id="goals-options">
+          <div class="tickbox">
+          <input type="checkbox" name="coping" id="coping" class="goals-check">
+          <label for="coping">Developing coping mechanisms</label><br>
+          </div>
+          <div class="tickbox">
+          <input type="checkbox" name="communication" id="communication" class="goals-check">
+          <label for="communication">Improving communication skills</label><br>
+        </div>
+          <div class="tickbox">
+          <input type="checkbox" name="confidence" id="confidence" class="goals-check">
+          <label for="confidence">Building self-esteem and confidence</label><br>
+        </div>
+        <div class="tickbox">
+          <input type="checkbox" name="stress" id="stress" class="goals-check">
+          <label for="stress">Managing stress and anxiety</label><br>
+        </div>
+          <div class="tickbox">
+          <input type="checkbox" name="trauma" id="trauma" class="goals-check">
+          <label for="trauma">Overcoming past trauma</label><br>
+        </div>
+        <div class="tickbox">
+          <input type="checkbox" name="relationship" id="relationship" class="goals-check">
+          <label for="relationship">Resolving relationship conflicts</label><br>
+        </div>
+          <div class="tickbox">
+          <input type="checkbox" name="identity-issues" id="self-awareness" class="goals-check">
+          <label for="self-awareness">Exploring personal growth and self-awareness</label><br>
+        </div>
+        <div class="tickbox">
+          <input type="checkbox" name="dont-know" id="dont-know" class="goals-check">
+          <label for="dont-know">I don't know</label><br>
+        </div>
+        <div class="tickbox">
+          <input type="checkbox" name="other" id="other" class="goals-check">
+          <label for="other">Other</label><br>
+        </div>
+        <button class="checkbox-btn" id="goals-btn">Next</button>
+
+        </div>
+
+        <div class="individual-question hidden" id="method-ques" style="text-align: center;">
+          What is your preferred method of communication <br> for therapy sessions?
+        </div>
+
+        <div class="options hidden" id="method-options">
+          <div class="tickbox">
+          <input type="checkbox" name="In-person" id="In-person" class="method-check">
+          <label for="In-person">In-person</label><br>
+          </div>
+          <div class="tickbox">
+          <input type="checkbox" name="Video-call" id="Video-call" class="method-check">
+          <label for="Video-call">Video call</label><br>
+        </div>
+          <div class="tickbox">
+          <input type="checkbox" name="Phone-call" id="Phone-call" class="method-check">
+          <label for="Phone-call">Phone call</label><br>
+        </div>
+        <div class="tickbox">
+          <input type="checkbox" name="Messaging" id="Messaging" class="method-check">
+          <label for="Messaging">Messaging</label><br>
+        </div>
+        <button class="checkbox-btn" id="method-btn">Next</button>
+      </div>
+
+      <div class="individual-question hidden" id="therapy-ques">
+        Have you had therapy before?
+      </div>
+      <div class="individual-buttons hidden" id="therapy-choice">
+        <button class="therapy_ques_btn">Yes</button>
+        <button class="therapy_ques_btn">No</button>
+                
+      </div>
+
+      <div class="individual-question hidden" id="mental-ques">
+        Have you been diagnosed with a mental health condition?
+      </div>
+      <div class="individual-buttons hidden" id="mental-choice">
+        <button class="mental_ques_btn">Yes</button>
+        <button class="mental_ques_btn">No</button>
+              
+      </div>
+
+      <div class="individual-question hidden" id="symptoms-ques" style="text-align: center;">
+        How often do you experience symptoms <br> related to your condition?
+      </div>
+      <div class="individual-buttons hidden" id="symptoms-choice">
+        <button class="symptoms_ques_btn">Never</button>
+        <button class="symptoms_ques_btn">Rarely</button>
+        <button class="symptoms_ques_btn">Sometimes</button>
+        <button class="symptoms_ques_btn">Often</button>
+        <button class="symptoms_ques_btn">Always</button>
+      </div>
+
+
+      <div class="individual-question hidden" id="severity-ques" style="text-align: center;">
+        How would you rate the severity <br> of your symptoms?
+      </div>
+      <div class="individual-buttons hidden" id="severity-choice">
+        <button class="severity_ques_btn">Mild</button>
+        <button class="severity_ques_btn">Moderate</button>
+        <button class="severity_ques_btn">Severe</button>
+        <button class="severity_ques_btn">Very Severe</button>
+        <button class="severity_ques_btn">No symptoms</button>
+        
+      </div>
+
+      <div class="individual-question hidden" id="treatment-ques" style="text-align: center;">
+        Have you tried any of the following treatments or <br> therapies for your condition?
+      </div>
+      <div class="individual-buttons hidden" id="treatment-choice">
+        <button class="treatment_ques_btn">Medication</button>
+        <button class="treatment_ques_btn">Psychotherapy</button>
+        <button class="treatment_ques_btn">Exercise</button>
+        <button class="treatment_ques_btn">Meditation or mindfulness</button>
+        <button class="treatment_ques_btn">Dietary changes</button>
+        <button class="treatment_ques_btn">Alternative therapies</button>
+        <button class="treatment_ques_btn">No</button>
+        
+      </div>
+
+
+      <div class="individual-question hidden" id="motivate-ques" style="text-align: center;">
+        How motivated are you to make changes <br> to manage your symptoms?
+      </div>
+      <div class="individual-buttons hidden" id="motivate-choice">
+        <button class="motivate_ques_btn">Not at all motivated</button>
+        <button class="motivate_ques_btn">Somewhat motivated</button>
+        <button class="motivate_ques_btn">Moderately motivated</button>
+        <button class="motivate_ques_btn">Very motivated</button>
+        <button class="motivate_ques_btn">Extremely motivated</button>
+        </div>
+
+        <div class="individual-question hidden" id="match" style="text-align: center;">
+          Let's match you to the best therapist <br> according to your preference
+        </div>
+        <div class="hidden" id="match-choice">
+          <button class="checkbox-btn" id="match-btn">Next</button>
+          </div>
+
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-column">
+            <h4>About Us</h4>
+            <p>
+              MindEase is a mental health organization dedicated to helping
+              people overcome stress, anxiety, and depression.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h4>Contact Us</h4>
+            <ul>
+              <li>Phone: 555-555-5555</li>
+              <li>Email: info@mindease.com</li>
+              <li>Address: 123 Main Street, Anytown USA</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Connect With Us</h4>
+            <ul>
+              <li>
+                <a href="#"
+                  ><i style="margin-right: 1.2em" class="fa fa-facebook"></i>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i style="margin-right: 0.9em" class="fa fa-instagram"></i>
+                  Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Subscribe to our Newsletter</h4>
+            <form>
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-row">
+          <div class="footer-column">
+            <div class="footer-bottom">
+              <a href="#"> Terms & Conditions</a>
+              <a href="#"> Privacy Policy</a>
+              <p>&copy; 2023 MindEase. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+
+    <script src="consult.js"></script>
+  </body>
+</html>

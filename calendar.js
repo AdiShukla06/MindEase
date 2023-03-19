@@ -67,3 +67,8 @@ function generateCalendar(month, year) {
 
 const today = new Date();
 generateCalendar(today.getMonth(), today.getFullYear());
+
+
+
+
+
