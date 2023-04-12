@@ -1,0 +1,296 @@
+/* fonts:  */
+
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Lato */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* Gascogne */
+@font-face {
+    font-family: 'gascogne';
+    src: url('/fonts/Gascogne-Regular.ttf') format('truetype');
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #FAF9F6;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    z-index: 999;
+    transition: all 0.5s ease;
+  }
+
+  
+
+  .navbar__logo img{
+    width: 5em;
+    /* position: absolute;
+    top: -0.8em;
+    left: -2px; */
+  }
+
+  .navbar__list {
+    display: flex;
+    list-style: none;
+    margin: 0.7em 0em;
+    padding: 0;
+    position: absolute;
+    top: 1.2em;
+    right: 1em;
+  }
+
+  .navbar__item {
+    margin-left: 1em;
+  }
+
+  .navbar__link {
+    font-size: 0.8em;
+    margin: 0px 0.5em;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .navbar__link:hover{
+    color: #655f5f;
+  }  
+
+  .scrolled {
+    background: linear-gradient(to bottom, #eaf1f4,  #feffff );
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+  }
+
+  .heading{
+    display: flex;
+    font-family: 'gascogne', sans-serif;
+    font-size: 3em;
+    margin-top: 1.5em;
+    justify-content: center;
+  }
+
+  .therapists-container {
+    margin-top: 3em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.therapist-card {
+	flex: 0 0 calc(33.33% - 1em);
+	margin-bottom: 2em;
+	padding: 1em;
+	border: 1px solid #ddd;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+	border-radius: 5px;
+	text-align: center;
+}
+
+.therapist-card img {
+	max-width: 10vw;
+    border-radius: 50%;
+}
+
+.therapist-card h2 {
+    font-family: 'gascogne', sans-serif;
+	margin-top: 1em;
+	font-size: 1.5em;
+}
+
+.therapist-card p {
+	margin-top: 1em;
+    font-family: 'inter', sans-serif;
+}
+
+.book-appointment-btn {
+	margin-top: 1em;
+	background-color: #4CAF50;
+	color: white;
+	padding: 1em;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+    font-family: 'inter',sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+.book-appointment-btn:hover {
+	background-color: #3e8e41;
+    scale: 1.08;
+}
+
+
+/* Styles for modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+  }
+
+  .modal-content h2{
+    font-family: 'gascogne', sans-serif;
+    align-self: center;
+  }
+
+  .modal-content p{
+    font-family: 'inter', sans-serif;
+    align-self: center;
+
+  }
+  
+  .close {
+    color: #aaa;
+    /* float: right; */
+    font-size: 28px;
+    font-weight: bold;
+    align-self: flex-end;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+
+
+
+
+
+  footer {
+    background-color: #161515;
+    padding: 50px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2em;
+  }
+  
+  .footer-column {
+    width: 23%;
+  }
+  
+  .footer-column h4 {
+    font-size: 1.7vw;
+    font-weight: 600;
+    margin-bottom: 20px;
+      color: whitesmoke;
+      font-family: 'gascogne', sans-serif;
+  }
+  
+  .footer-column p {
+    font-size: 1.3vw;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: rgb(195, 191, 191);
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .footer-column ul {
+    padding-left: 0;
+    margin-bottom: 20px;
+    list-style: none;
+  }
+  
+  .footer-column li {
+    font-size: 1.3vw;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: rgb(195, 191, 191);
+    font-family: 'Inter',sans-serif;
+  }
+  
+  .footer-column a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.3vw;
+    line-height: 1.5;
+    color: rgb(195, 191, 191);
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .footer-column a:hover {
+    color: #007bff;
+  }
+  
+  .footer-column i {
+    font-size: 1.2em;
+    margin-right: 0.8em;
+  }
+  
+  .footer-column form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-column input[type="email"] {
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    width: 70%;
+  }
+  
+  .footer-column button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.3vw;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .footer-column button[type="submit"]:hover {
+    scale: 1.04;
+  }
+  
+  .footer-bottom a{
+      margin-bottom: 1em;
+  }
