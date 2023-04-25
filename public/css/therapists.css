@@ -1,0 +1,493 @@
+/* fonts:  */
+
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Lato */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* Gascogne */
+@font-face {
+    font-family: 'gascogne';
+    src: url('/fonts/Gascogne-Regular.ttf') format('truetype');
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #FAF9F6;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    z-index: 999;
+    transition: all 0.5s ease;
+  }
+
+  
+
+  .navbar__logo img{
+    width: 5em;
+    /* position: absolute;
+    top: -0.8em;
+    left: -2px; */
+  }
+
+  .navbar__list {
+    display: flex;
+    list-style: none;
+    margin: 0.7em 0em;
+    padding: 0;
+    position: absolute;
+    top: 1.2em;
+    right: 1em;
+  }
+
+  .navbar__item {
+    margin-left: 1em;
+  }
+
+  .navbar__link {
+    font-size: 0.8em;
+    margin: 0px 0.5em;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .navbar__link:hover{
+    color: #655f5f;
+  }  
+
+  .scrolled {
+    background: linear-gradient(to bottom, #eaf1f4,  #feffff );
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+  }
+
+
+
+  .dashboard-container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .dashboard-container h2 {
+    font-size: 2.1em;
+    margin-bottom: 1.4em;
+    margin-top: 1.4em;
+    font-family: 'gascogne', sans-serif;
+    text-align: center;
+  }
+  
+  .stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+  }
+  
+  .stats-box {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    flex: 1;
+    margin-right: 10px;
+    font-family: 'inter',sans-serif;
+  }
+  
+  .stats-box:last-child {
+    margin-right: 0;
+  }
+  
+  .stats-box h3 {
+    font-size: 4.1em;
+    margin-bottom: 0.3em;
+  }
+  
+  .stats-box p {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .appointments-container {
+    margin-top: 20px;
+  }
+  
+  .appointments-container h3
+  {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-family: 'gascogne', sans-serif;
+    }
+    
+    .appointments-list {
+    margin-top: 20px;
+    }
+    
+    .appointments-list h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    }
+    
+    .appointments-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+    
+    .appointments-list li {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'inter',sans-serif;
+    }
+    
+    .appointments-list li button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    
+    .appointment-form {
+    margin-top: 20px;
+    }
+    
+    .appointment-form label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'inter' ,sans-serif;
+    }
+    
+    .appointment-form input {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 100%;
+    font-family: 'inter', sans-serif;
+    }
+    
+    .appointment-form button {
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'inter', sans-serif;
+    }  
+
+
+    .appointments-container {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 20px;
+      }
+      
+      .appointments-container h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      
+      .appointment-form {
+        margin-bottom: 20px;
+      }
+      
+      .appointment-form label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      
+      .appointment-form input {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+        width: 100%;
+        font-size: 16px;
+      }
+      
+      .appointment-form button {
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      .appointment-form button:hover {
+        background-color: #0062cc;
+      }
+      
+      .appointments-list {
+        margin-top: 20px;
+      }
+      
+      .appointments-list h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      
+      .appointments-list ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .appointments-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #f2f2f2;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+      
+      .appointments-list .cancel {
+        padding: 5px 10px;
+        background-color: #413132;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .appointments-list .accept{
+        
+        padding: 5px 10px;
+        background-color: #1e8f2f;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      .appointments-list li button:hover {
+        background-color: #c82333;
+      }
+
+
+      #set-availability-btn {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(to right, #36d1dc, #5b86e5);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        padding: 0.9em 1.9em;
+        font-size: 1.3vw;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        z-index: 1;
+        margin-top: 1.5em;
+      }
+      
+      #set-availability-btn:hover {
+        transform: scale(1.1);
+      }
+
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+
+      .modal h2{
+        font-family: 'gascogne' ,sans-serif;
+        margin-bottom: 0.5em;
+        text-align: center;
+      }
+      
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+      }
+
+      .available-form{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .available-form label{
+        font-family: 'inter' ,sans-serif;
+        margin-top: 0.5em ;
+        margin-bottom: 0.5em;
+      }
+      
+      .available-form button{
+        font-family: 'inter', sans-serif;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      .checkbox-group {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      .checkbox-group label {
+        margin-right: 10px;
+        font-family: 'inter', sans-serif;
+      }
+      
+
+
+  footer {
+    background-color: #161515;
+    padding: 50px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2em;
+  }
+  
+  .footer-column {
+    width: 23%;
+  }
+  
+  .footer-column h4 {
+    font-size: 1.7vw;
+    font-weight: 600;
+    margin-bottom: 20px;
+      color: whitesmoke;
+      font-family: 'gascogne', sans-serif;
+  }
+  
+  .footer-column p {
+    font-size: 1.3vw;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: rgb(195, 191, 191);
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .footer-column ul {
+    padding-left: 0;
+    margin-bottom: 20px;
+    list-style: none;
+  }
+  
+  .footer-column li {
+    font-size: 1.3vw;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: rgb(195, 191, 191);
+    font-family: 'Inter',sans-serif;
+  }
+  
+  .footer-column a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.3vw;
+    line-height: 1.5;
+    color: rgb(195, 191, 191);
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .footer-column a:hover {
+    color: #007bff;
+  }
+  
+  .footer-column i {
+    font-size: 1.2em;
+    margin-right: 0.8em;
+  }
+  
+  .footer-column form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-column input[type="email"] {
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    width: 70%;
+  }
+  
+  .footer-column button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.3vw;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .footer-column button[type="submit"]:hover {
+    scale: 1.04;
+  }
+  
+  .footer-bottom a{
+      margin-bottom: 1em;
+  }

@@ -1,3 +1,5 @@
+
+
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
@@ -8,67 +10,58 @@ window.addEventListener('scroll', () => {
   }
 });
 
-const calendar = document.getElementById("calendar");
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-let selectedDate = null;
 
-function generateCalendar(month, year) {
-  const firstDay = new Date(year, month, 1);
-  const lastDay = new Date(year, month + 1, 0);
-  const today = new Date();
+// Get the cancel appointment buttons
+const cancelBtns = document.querySelectorAll(".cancel-appointment-btn");
 
-  const monthYear = document.createElement("div");
-  monthYear.innerText = months[month] + " " + year;
-  calendar.appendChild(monthYear);
+// Add a click event listener to each cancel button
+cancelBtns.forEach((btn) => {
+  btn.addEventListener("click", cancelAppointment);
+});
 
-  for (let i = 0; i < days.length; i++) {
-    const day = document.createElement("div");
-    day.innerText = days[i];
-    calendar.appendChild(day);
-  }
-
-  for (let i = 0; i < firstDay.getDay(); i++) {
-    const emptyDay = document.createElement("div");
-    calendar.appendChild(emptyDay);
-  }
-
-  for (let i = 1; i <= lastDay.getDate(); i++) {
-    const day = document.createElement("div");
-    day.innerText = i;
-    if (year == today.getFullYear() && month == today.getMonth() && i == today.getDate()) {
-      day.classList.add("today");
-    }
-    day.addEventListener("click", () => {
-      selectedDate = new Date(year, month, i);
-      document.querySelectorAll("#calendar .selected").forEach((item) => {
-        item.classList.remove("selected");
-      });
-      day.classList.add("selected");
-      // add or delete daily tasks on selected date
-    });
-    calendar.appendChild(day);
-  }
+// Function to cancel an appointment
+function cancelAppointment(event) {
+  const appointment = event.target.parentNode;
+  appointment.remove();
 }
 
-const today = new Date();
-generateCalendar(today.getMonth(), today.getFullYear());
+// Get the view feedback buttons
+const viewFeedbackBtns = document.querySelectorAll(".view-feedback-btn");
+
+// Add a click event listener to each view feedback button
+viewFeedbackBtns.forEach((btn) => {
+  btn.addEventListener("click", viewFeedback);
+});
+
+// Function to view feedback for an appointment
+function viewFeedback(event) {
+  alert("Feedback for this appointment is: Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+}
+
+const apiKey = '6KsUGSq6T-e6rMB8xCOpNA';
+const apiSecret = 'OiH7Nss1K3wfNmhIe5eZcgkHzGbOSStj7U7w';
 
 
+// Add click event listener to each join meeting link
+const joinMeetingLinks = document.querySelectorAll('.join-meeting-link');
+joinMeetingLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const meetingId = this.getAttribute('data-meeting-id');
+    const url = `https://zoom.us/wc/${meetingId}/join?prefer=1&un=`;
+    const signature = generateZoomSignature(apiKey, apiSecret, url);
+    window.location.href = `${url}&signature=${signature}`;
+  });
+});
 
+// Generate Zoom signature using API key, secret, and meeting URL
+function generateZoomSignature(apiKey, apiSecret, meetingNumber, role) {
+  const timestamp = new Date().getTime() - 30000;
+  const msg = new TextEncoder().encode(apiKey + meetingNumber + timestamp + role);
+  const hash = crypto.createHmac('sha256', apiSecret).update(msg).digest();
+  const signature = `${apiKey}.${meetingNumber}.${timestamp}.${role}.${Buffer.from(hash).toString('base64')}`;
+  return signature;
+}
 
 

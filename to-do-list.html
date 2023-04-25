@@ -35,64 +35,53 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-    <link rel="stylesheet" href="to-do-list.css" />
+    <link rel="stylesheet" href="/css/to-do-list.css" />
   </head>
   <body onload="loadList()">
-    <nav class="navbar">
-      <div class="navbar__logo">
-        <img src="/Logos/MindEase-removebg.png" alt="" />
-      </div>
-      <ul class="navbar__list">
-        <li class="navbar__item">
-          <a class="navbar__link" href="index.html">Home</a>
-        </li>
-        <li class="navbar__item"><a class="navbar__link" href="#">Blogs</a></li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="#">Consult</a>
-        </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="dashboard.html">My Dashboard</a>
-        </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="/signin.html">Account</a>
-        </li>
-      </ul>
-    </nav>
+    
 
     <section>
-      <div class="navigation">
+      <div class="navigation" id="mySidenav">
         <ul>
           <li>
-            <a href="dashboard.html"><i class="fi fi-sr-home"></i> </a>
+            <a href="/dashboard"><i class="fi fi-sr-home"></i> </a>
+            <a href="/dashboard"><span>Home</span> </a>
+          </li>
+          <li class="current">
+            <a href="/to-do-list"><i class="fi fi-br-list-check"></i> </a>
+            <a href="/to-do-list"><span>To-do list</span></a>
+          </li>
+          <li >
+            <a href="/calendar"><i class="fa fa-calendar"></i> </a>
+            <a href="/calendar"><span>Appointments</span></a>
           </li>
           <li>
-            <a href="to-do-list.html"><i class="fi fi-br-list-check"></i> </a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-calendar"></i> </a>
-          </li>
-          <li>
-            <a href="#"><i class="fi fi-sr-star"></i> </a>
+            <a href="/consult"><i class="fi fi-sr-star"></i> </a>
+            <a href="/consult"><span>Consult</span></a>
           </li>
           <li>
             <a href="#"><i class="fi fi-bs-search"></i> </a>
+            <a href="#"><span>Search</span></a>
           </li>
 
           <li>
             <a href="#"><i class="fi fi-sr-settings"></i> </a>
+            <a href="#"><span>Settings</span></a>
           </li>
           <li>
-            <a href="index.html"><i class="fi fi-br-exit"></i> </a>
+            <a href="/index"><i class="fi fi-br-exit"></i> </a>
+            <a href="/index"><span>Exit</span></a>
           </li>
         </ul>
       </div>
 
-      <div class="maincontainer">
+      <div class="maincontainer" id="mymainnav">
         <div class="head">
-          <div class="heading">Hello <span>Aditya!</span></div>
-          <a href="#" style="text-decoration: none"
+          <img class="profile" src="/Images/profile.png" alt="">
+          <div class="heading">Hello <br><span>Aditya!</span></div>
+          <!-- <a href="#" style="text-decoration: none"
             ><i class="fi fi-ss-bell"></i
-          ></a>
+          ></a> -->
         </div>
         <div class="header">
           <h1>Let's Plan <span>Things</span></h1>
@@ -109,66 +98,10 @@
       </div>
     </section>
 
-    <footer>
-      <div class="container">
-        <div class="footer-row">
-          <div class="footer-column">
-            <h4>About Us</h4>
-            <p>
-              MindEase is a mental health organization dedicated to helping
-              people overcome stress, anxiety, and depression.
-            </p>
-          </div>
-          <div class="footer-column">
-            <h4>Contact Us</h4>
-            <ul>
-              <li>Phone: 555-555-5555</li>
-              <li>Email: info@mindease.com</li>
-              <li>Address: 123 Main Street, Anytown USA</li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>Connect With Us</h4>
-            <ul>
-              <li>
-                <a href="#"
-                  ><i style="margin-right: 1.2em" class="fa fa-facebook"></i>
-                  Facebook</a
-                >
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
-              </li>
-              <li>
-                <a href="#"
-                  ><i style="margin-right: 0.9em" class="fa fa-instagram"></i>
-                  Instagram</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>Subscribe to our Newsletter</h4>
-            <form>
-              <input type="email" placeholder="Enter your email" required />
-              <button type="submit">Subscribe</button>
-            </form>
-          </div>
-        </div>
-        <div class="footer-row">
-          <div class="footer-column">
-            <div class="footer-bottom">
-              <a href="#"> Terms & Conditions</a>
-              <a href="#"> Privacy Policy</a>
-              <p>&copy; 2023 MindEase. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    
 
     <script src="https://use.fontawesome.com/1744f3f671.js"></script>
 
-    <script src="to-do-list.js"></script>
+    <script src="/javasc/to-do-list.js"></script>
   </body>
 </html>

@@ -1,0 +1,170 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In | MindEase</title>
+    <link
+      rel="shortcut icon"
+      href="/Logos/logo_transparent.png"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-0GLJjKp//MZEV8fZq4+J2U5z6U5fW8Rqb0S5OpeEwjlJwdLQ2g0vZUJ+JfWy9cJ0Wg+IvCp7mHdAIOJb7DAbLg=="
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="/css/signintherapist.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <img src="/Logos/MindEase-removebg.png" alt="" />
+      </div>
+      
+      <ul class="navbar__list">
+        <li class="navbar__item"><a class="navbar__link" href="/index">Home</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="#">Blogs</a></li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/consult">Consult</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/dashboard">My Dashboard</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/signin">Account</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <form class="login-form" action="#" method="POST">
+        <div class="form-container">
+          <div class="form-heading">Log In</div>
+          <div class="form-subheading">
+            New to this Place? <a class="signuplink" href="/signup.html">Sign Up</a>
+          </div>
+          <div class="form-main">
+            <div class="credentials">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Email ID"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  placeholder="Password"
+                />
+              </div>
+              <div class="layer-form">
+                <div class="form-groups">
+                  <input type="checkbox" id="remember-me" name="remember-me" />
+                  <label for="remember-me">Remember Me</label>
+                </div>
+                <div class="forgot-password">
+                  <a href="#">Forgot Password?</a>
+                </div>
+              </div>
+              <button class="submit-btn" type="submit" onclick="window.location.href='/therapists'">Login</button>
+            </div>
+            <div class="line-form"></div>
+            <div class="extra-login">
+              <div class="extra-grp">
+                <img
+                  src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
+                  width="30"
+                  alt="google logo "
+                />
+                <a href="#">Login with Google</a>
+              </div>
+              <div class="extra-grp">
+                <img
+                  src="https://www.freepnglogos.com/uploads/facebook-logo-13.png"
+                  width="30"
+                  alt="fb logo"
+                  style="border-radius: 0%"
+                />
+                <a href="#">Login with Facebook</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <div class="container2">
+        <div class="footer-row">
+          <div class="footer-column">
+            <h4>About Us</h4>
+            <p>
+              MindEase is a mental health organization dedicated to helping
+              people overcome stress, anxiety, and depression.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h4>Contact Us</h4>
+            <ul>
+              <li>Phone: 555-555-5555</li>
+              <li>Email: info@mindease.com</li>
+              <li>Address: 123 Main Street, Anytown USA</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Connect With Us</h4>
+            <ul>
+              <li>
+                <a href="#"
+                  ><i style="margin-right: 1.2em" class="fa fa-facebook"></i>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i style="margin-right: 0.9em" class="fa fa-instagram"></i>
+                  Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Subscribe to our Newsletter</h4>
+            <form>
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-row">
+          <div class="footer-column">
+            <div class="footer-bottom">
+              <a href="#"> Terms & Conditions</a>
+              <a href="#"> Privacy Policy</a>
+              <p>&copy; 2023 MindEase. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+
+    <script src="/javasc/signintherapist.js"></script>
+  </body>
+</html>

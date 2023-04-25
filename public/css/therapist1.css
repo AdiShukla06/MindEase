@@ -1,0 +1,176 @@
+/* fonts:  */
+
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Lato */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* Gascogne */
+@font-face {
+    font-family: 'gascogne';
+    src: url('/fonts/Gascogne-Regular.ttf') format('truetype');
+}
+
+
+*{
+    margin: 0;
+    padding: 0.5em;
+    
+}
+
+body{
+    background-image: url("/Images/bgbg4.jpg");
+    background-size: cover;
+    background-blend-mode: lighten;
+    background-color: rgba(255, 255, 255, 0.765);
+    overflow: hidden;
+}
+
+
+
+
+.therapist{
+    display: flex;
+}
+
+.introduction{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    justify-content: center;
+
+}
+
+.introduction img{
+    width: 15em;
+    border-radius: 50%;
+    /* margin-left: 0.2em; */
+}
+
+.introduction h2{
+    font-family: 'gascogne', sans-serif;
+    font-size: 2.5em;
+}
+
+.introduction .intro{
+    font-family: 'inter',sans-serif;
+    margin-left: 0.9em;
+    font-weight: 500;
+}
+
+.line{
+    border-left: 2px solid rgba(39, 40, 39, 0.441);
+    height: 88vh;
+}
+
+.appointment{
+    display: flex;
+    width: 45vw;
+    justify-content: space-around;
+}
+
+.dates{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.dates button{
+    margin: 1.4em;
+    width: 10em;
+    height: 3em;
+    border: none;
+    font-family: 'inter', sans-serif;
+    background-color: rgb(33, 40, 40);
+    border-radius: 5px;
+    color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.89) 1px 1px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.dates button:hover{
+    scale: 1.1;
+}
+
+.time{
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.time .timeSlot{
+    margin: 1.4em;
+    height: 2.8em;
+    border: none;
+    font-family: 'inter', sans-serif;
+    background-color: rgb(33, 40, 40);
+    border-radius: 5px;
+    color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.89) 1px 1px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.time button:hover{
+    scale: 1.1;
+}
+
+.blob{
+    display: flex;
+}
+
+.blobs{
+    font-family: 'inter',sans-serif;
+    background-color: red;
+    margin: 0.5em;
+    border-radius: 7px;
+    font-size: 0.8em;
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+}
+
+.dateSlot.selected{
+    color: rgb(255, 255, 255);
+    background-color: rgb(48, 138, 217);
+}
+.timeSlot.selected{
+    color: rgb(255, 255, 255);
+    background-color: rgb(48, 138, 217);
+}
+
+.headappointment{
+    font-family: 'gascogne',sans-serif;
+    font-size: 1.7em;
+    font-weight: 600;
+}
+
+.submit{
+    width: 21em;
+    background-color: rgb(32, 159, 32);
+    border: none;
+    border-radius: 7px;
+    font-family: 'inter',sans-serif;
+    color: white;
+    font-size: 1em;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.exit{
+    text-decoration: none;
+    color: white;
+    font-family: 'inter' ,sans-serif;
+    font-weight: 500;
+    background-color: rgb(150, 21, 21);
+        margin: 1em;
+        cursor: pointer;
+        border-radius: 7px;
+        font-size: 0.7em;
+        padding: 0.8em;
+}
+

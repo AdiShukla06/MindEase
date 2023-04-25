@@ -1,158 +1,134 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Dashboard | MindEase</title>
     <link
       rel="shortcut icon"
       href="/Logos/MindEase-removebg.png"
       type="image/x-icon"
     />
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css"
+    />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="dashboard.css">
-
-
-</head>
-<body>
-
-  <nav class="navbar">
-    <div class="navbar__logo">
-      <img src="/Logos/MindEase-removebg.png" alt="" />
-    </div>
-    <ul class="navbar__list">
-      <li class="navbar__item"><a class="navbar__link" href="index.html">Home</a></li>
-      <li class="navbar__item"><a class="navbar__link" href="#">Blogs</a></li>
-      <li class="navbar__item">
-        <a class="navbar__link" href="#">Consult</a>
-      </li>
-      <li class="navbar__item">
-        <a class="navbar__link" href="dashboard.html">My Dashboard</a>
-      </li>
-      <li class="navbar__item">
-        <a class="navbar__link" href="/signin.html">Account</a>
-      </li>
-    </ul>
-  </nav>
-
-  
-
-
-
-  <section>
-
-    <div class="navigation">
-      <ul>
-        <li><a href="dashboard.html"><i class="fi fi-sr-home"></i> </a></li>
-        <li><a href="to-do-list.html"><i class="fi fi-br-list-check"></i> </a></li>
-        <li><a href="calendar.html"><i class="fa fa-calendar"></i> </a></li>
-        <li><a href="#"><i class="fi fi-sr-star"></i> </a></li>
-        <li><a href="#"><i class="fi fi-bs-search"></i> </a></li>
-
-        <li><a href="#"><i class="fi fi-sr-settings"></i> </a></li>
-        <li><a href="index.html"><i class="fi fi-br-exit"></i> </a></li>
-      </ul>
-    </div>
-
-    <div class="maincontainer">
-      <div class="head">
-        <div class="heading">Hello <span>Aditya!</span> </div>
-        <a href="#" style="text-decoration: none;"><i class="fi fi-ss-bell"></i></a>
-      </div>
-      <div class="mood-tracker">
-        <!-- <h2>Daily Mood Tracker</h2> -->
-        <p>How are you feeling today?</p>
-        <div class="mood-icons">
-          <button class="mood-icon" data-mood="happy">
-            <i class="i-happy"></i>
-            <span>Happy</span>
-          </button>
-          <button class="mood-icon" data-mood="excited">
-            <i class="i-excited"></i>
-            <span>Excited</span>
-          </button>
-          <button class="mood-icon" data-mood="neutral">
-            <i class="i-neutral"></i>
-            <span>Neutral</span>
-          </button>
-          <button class="mood-icon" data-mood="sad">
-            <i class="i-sad"></i>
-            <span>Sad</span>
-          </button>
-          <button class="mood-icon" data-mood="angry">
-            <i class="i-angry"></i>
-            <span>Angry</span>
-          </button>
-        </div>
-        <div class="mood-notes">
-          <label for="notes">Additional Notes:</label>
-          <textarea id="notes" placeholder="Optional"></textarea>
-        </div>
-        <button class="submit-btn">Submit</button>
-      </div>
-    </div>
-    
-  </section>
-
-
-
+    <link rel="stylesheet" href="/css/dashboard.css" />
+  </head>
+  <body>
     
 
+    <section>
+      <div class="navigation" id="mySidenav">
+        <ul>
+          <li class="current">
+            <a href="/dashboard"><i class="fi fi-sr-home"></i> </a>
+            <a href="/dashboard"><span>Home</span> </a>
+          </li>
+          <li>
+            <a href="/to-do-list"><i class="fi fi-br-list-check"></i> </a>
+            <a href="/to-do-list"><span>To-do list</span></a>
+          </li>
+          <li>
+            <a href="/calendar"><i class="fa fa-calendar"></i> </a>
+            <a href="/calendar"><span>Appointments</span></a>
+          </li>
+          <li>
+            <a href="/consult"><i class="fi fi-sr-star"></i> </a>
+            <a href="/consult"><span>Consult</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fi fi-bs-search"></i> </a>
+            <a href="#"><span>Search</span></a>
+          </li>
 
-      <footer>
-        <div class="container">
-          <div class="footer-row">
-            <div class="footer-column">
-              <h4>About Us</h4>
-              <p>MindEase is a mental health organization dedicated to helping people overcome stress, anxiety, and depression.</p>
-            </div>
-            <div class="footer-column">
-              <h4>Contact Us</h4>
-              <ul>
-                <li>Phone: 555-555-5555</li>
-                <li>Email: info@mindease.com</li>
-                <li>Address: 123 Main Street, Anytown USA</li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h4>Connect With Us</h4>
-              <ul>
-                <li><a href="#"><i style="margin-right: 1.2em;" class="fa fa-facebook"></i> Facebook</a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
-                <li><a href="#"><i style="margin-right: 0.9em;" class="fa fa-instagram"></i> Instagram</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h4>Subscribe to our Newsletter</h4>
-              <form>
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
-              </form>
-            </div>
-          </div>
-          <div class="footer-row">
-            <div class="footer-column">
-              <div class="footer-bottom">
-              <a href="#"> Terms & Conditions</a>
-              <a href="#"> Privacy Policy</a>
-              <p>&copy; 2023 MindEase. All rights reserved.</p>
-            </div>
-            </div>
-          </div>
+          <li>
+            <a href="#"><i class="fi fi-sr-settings"></i> </a>
+            <a href="#"><span>Settings</span></a>
+          </li>
+          <li>
+            <a href="/index"><i class="fi fi-br-exit"></i> </a>
+            <a href="/index"><span>Exit</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="maincontainer" id="mymainnav">
+        <div class="head">
+          <img class="profile" src="/Images/profile.png" alt="">
+          <div class="heading">Hello <br><span>Aditya!</span></div>
+          <!-- <a href="#" style="text-decoration: none"
+            ><i class="fi fi-ss-bell"></i
+          ></a> -->
         </div>
-      </footer>
+        <div class="mood-tracker hidden" id="mood-tracker">
+          <!-- <h2>Daily Mood Tracker</h2> -->
+          <p>How are you feeling today?</p>
+          <div class="mood-icons">
+            <button class="mood-icon" data-mood="happy">
+              <i class="i-happy"></i>
+              <span>Happy</span>
+            </button>
+            <button class="mood-icon" data-mood="excited">
+              <i class="i-excited"></i>
+              <span>Excited</span>
+            </button>
+            <button class="mood-icon" data-mood="neutral">
+              <i class="i-neutral"></i>
+              <span>Neutral</span>
+            </button>
+            <button class="mood-icon" data-mood="sad">
+              <i class="i-sad"></i>
+              <span>Sad</span>
+            </button>
+            <button class="mood-icon" data-mood="angry">
+              <i class="i-angry"></i>
+              <span>Angry</span>
+            </button>
+          </div>
+          <div class="mood-notes">
+            <label for="notes">Additional Notes:</label>
+            <textarea id="notes" placeholder="Optional"></textarea>
+          </div>
+          <button id="submit-btn" class="submit-btn">Submit</button>
+        </div>
       
-      <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+        
 
+        <div class="dashbox">
+        <button id="bookbtn" onclick="window.location.href='/consult'" class="book-a-session">Our Experts <br> <span class="subhead"> Book a Session today & feel better </span></button>
+        <button class="mood" id="moodbtn">How are you feeling today?</button>
+      </div>
+        <button id="blogbtn" class="blog" onclick="window.location.href='/blogs'">Know about mental health <br><span class="subhead"> Learn & Grow | Know mental health, Know you </span></button>
+      </div>
+    </section>
 
-      <script src="dashboard.js"></script>
-</body>
+    
+
+    <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+
+    <script src="/javasc/dashboard.js"></script>
+  </body>
 </html>

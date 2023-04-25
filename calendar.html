@@ -1,138 +1,161 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calendar | MindEase</title>
     <link
       rel="shortcut icon"
       href="/Logos/MindEase-removebg.png"
       type="image/x-icon"
     />
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css"
+    />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/calendar.css" />
+  </head>
+  <body>
+    
 
-    <link rel="stylesheet" href="calendar.css">
+    <section>
+      <div class="navigation" id="mySidenav">
+        <ul>
+          <li>
+            <a href="/dashboard"><i class="fi fi-sr-home"></i> </a>
+            <a href="/dashboard"><span>Home</span> </a>
+          </li>
+          <li>
+            <a href="/to-do-list"><i class="fi fi-br-list-check"></i> </a>
+            <a href="/to-do-list"><span>To-do list</span></a>
+          </li>
+          <li class="current">
+            <a href="/calendar"><i class="fa fa-calendar"></i> </a>
+            <a href="/calendar"><span>Appointments</span></a>
+          </li>
+          <li>
+            <a href="/consult"><i class="fi fi-sr-star"></i> </a>
+            <a href="/consult"><span>Consult</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fi fi-bs-search"></i> </a>
+            <a href="#"><span>Search</span></a>
+          </li>
 
-
-</head>
-<body>
-
-  <nav class="navbar">
-    <div class="navbar__logo">
-      <img src="/Logos/MindEase-removebg.png" alt="" />
-    </div>
-    <ul class="navbar__list">
-      <li class="navbar__item"><a class="navbar__link" href="index.html">Home</a></li>
-      <li class="navbar__item"><a class="navbar__link" href="#">Blogs</a></li>
-      <li class="navbar__item">
-        <a class="navbar__link" href="#">Consult</a>
-      </li>
-      <li class="navbar__item">
-        <a class="navbar__link" href="dashboard.html">My Dashboard</a>
-      </li>
-      <li class="navbar__item">
-        <a class="navbar__link" href="/signin.html">Account</a>
-      </li>
-    </ul>
-  </nav>
-
-  
-
-
-
-  <section>
-
-    <div class="navigation">
-      <ul>
-        <li><a href="dashboard.html"><i class="fi fi-sr-home"></i> </a></li>
-        <li><a href="to-do-list.html"><i class="fi fi-br-list-check"></i> </a></li>
-        <li><a href="calendar.html"><i class="fa fa-calendar"></i> </a></li>
-        <li><a href="#"><i class="fi fi-sr-star"></i> </a></li>
-        <li><a href="#"><i class="fi fi-bs-search"></i> </a></li>
-
-        <li><a href="#"><i class="fi fi-sr-settings"></i> </a></li>
-        <li><a href="index.html"><i class="fi fi-br-exit"></i> </a></li>
-      </ul>
-    </div>
-
-    <div class="maincontainer">
-      <div class="head">
-        <div class="heading">Hello <span>Aditya!</span> </div>
-        <a href="#" style="text-decoration: none;"><i class="fi fi-ss-bell"></i></a>
+          <li>
+            <a href="#"><i class="fi fi-sr-settings"></i> </a>
+            <a href="#"><span>Settings</span></a>
+          </li>
+          <li>
+            <a href="/index"><i class="fi fi-br-exit"></i> </a>
+            <a href="/index"><span>Exit</span></a>
+          </li>
+        </ul>
       </div>
 
-      <body>
-        <div id="calendar"></div>
-      </body>
-      
-    </div>
+      <div class="maincontainer" id="mymainnav">
+        <div class="head">
+          <img class="profile" src="/Images/profile.png" alt="">
+          <div class="heading">Hello <br><span>Aditya!</span></div>
+          <!-- <a href="#" style="text-decoration: none"
+            ><i class="fi fi-ss-bell"></i
+          ></a> -->
+        </div>
 
-   
-      
-    
-  </section>
+        <div class="appointments-container">
+          <h2>My Appointments</h2>
 
-
-
-    
-
-
-      <footer>
-        <div class="container">
-          <div class="footer-row">
-            <div class="footer-column">
-              <h4>About Us</h4>
-              <p>MindEase is a mental health organization dedicated to helping people overcome stress, anxiety, and depression.</p>
-            </div>
-            <div class="footer-column">
-              <h4>Contact Us</h4>
-              <ul>
-                <li>Phone: 555-555-5555</li>
-                <li>Email: info@mindease.com</li>
-                <li>Address: 123 Main Street, Anytown USA</li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h4>Connect With Us</h4>
-              <ul>
-                <li><a href="#"><i style="margin-right: 1.2em;" class="fa fa-facebook"></i> Facebook</a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
-                <li><a href="#"><i style="margin-right: 0.9em;" class="fa fa-instagram"></i> Instagram</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h4>Subscribe to our Newsletter</h4>
-              <form>
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
-              </form>
-            </div>
+          <div class="upcoming-appointments">
+            <h3>Pending Appointments</h3>
+            <ul>
+              <li class="appointments">
+                <p>Therapist: Yash Pali</p>
+                <p>Date: 2023-05-10</p>
+                <p>Time: 10:00 AM - 11:00 AM</p>
+                <button class="cancel-appointment-btn">Cancel</button>
+              </li>
+              <li class="appointments">
+                <p>Therapist: Aditya Shukla</p>
+                <p>Date: 2023-05-12</p>
+                <p>Time: 3:00 PM - 4:00 PM</p>
+                <button class="cancel-appointment-btn">Cancel</button>
+              </li>
+              <!-- add more upcoming appointments here -->
+            </ul>
           </div>
-          <div class="footer-row">
-            <div class="footer-column">
-              <div class="footer-bottom">
-              <a href="#"> Terms & Conditions</a>
-              <a href="#"> Privacy Policy</a>
-              <p>&copy; 2023 MindEase. All rights reserved.</p>
-            </div>
-            </div>
+
+
+          <div class="upcoming-appointments">
+            <h3>Upcoming Appointments</h3>
+            <ul>
+              <li class="appointments">
+                <p>Therapist: Yash Pali</p>
+                <p>Date: 2023-05-10</p>
+                <p>Time: 10:00 AM - 11:00 AM</p>
+                <a href="#" class="join-meeting-link" data-meeting-id="zoom_12345">Join Meeting</a>
+                <button class="cancel-appointment-btn">Cancel</button>
+              </li>
+              <li class="appointments">
+                <p>Therapist: Aditya Shukla</p>
+                <p>Date: 2023-05-12</p>
+                <p>Time: 3:00 PM - 4:00 PM</p>
+                <button class="cancel-appointment-btn">Cancel</button>
+              </li>
+              <!-- add more upcoming appointments here -->
+            </ul>
+          </div>
+          <div class="past-appointments">
+            <h3>Past Appointments</h3>
+            <ul>
+              <li class="appointments">
+                <p>Therapist: Digant Chaubey</p>
+                <p>Date: 2023-04-20</p>
+                <p>Time: 2:00 PM - 3:00 PM</p>
+                <button class="view-feedback-btn">View Feedback</button>
+              </li>
+              <li class="appointments">
+                <p>Therapist: Divakar Jaiswal</p>
+                <p>Date: 2023-04-15</p>
+                <p>Time: 11:00 AM - 12:00 PM</p>
+                <button class="view-feedback-btn">View Feedback</button>
+              </li>
+              <!-- add more past appointments here -->
+            </ul>
           </div>
         </div>
-      </footer>
-      
-      
+      </div>
+    </section>
 
-      
-      <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+    
 
+    <script src="https://use.fontawesome.com/1744f3f671.js"></script>
 
-      <script src="calendar.js"></script>
-</body>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script> -->
+
+    <script src="/javasc/calendar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+  </body>
 </html>

@@ -10,6 +10,15 @@ window.addEventListener('scroll', () => {
 
 
 
+const btn_category = document.getElementById("therapy-category");
+const category = document.getElementById("category");
+consult_container = document.getElementById("consult-container");
+btn_category.addEventListener("click", function(){
+category.classList.toggle("hidden");
+consult_container.classList.toggle("hidden");
+})
+
+
 const button_individual = document.getElementById("individual-q1-btn");
 const first_question = document.getElementById("question");
 const individual_ques_box = document.getElementById("individual-ques-box");
@@ -358,7 +367,7 @@ match_btn.addEventListener("click", () => {
   // match_btn.classList.toggle("hidden");
   // window.close('consult.html');
   // window.open('signin.html');
-    window.location.href = "signin.html";
+    window.location.href = "/signin";
 })
 
 

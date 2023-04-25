@@ -75,7 +75,38 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     
   }
+
+
+  .category{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+
+  }
+
+  .category button img{
+    max-width: 15vw;
+  }
   
+  .category button{
+    margin-bottom: 2em;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .category button:hover{
+    scale: 1.1;
+  }
+
+  .category h3{
+    font-family: 'inter', sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+  }
   
   .consult-container{
     /* background-image: url(/Images/consult/background/image.png);

@@ -18,31 +18,42 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="consult.css" />
+    <link rel="stylesheet" href="/css/consult.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="navbar__logo">
         <img src="/Logos/MindEase-removebg.png" alt="" />
       </div>
+      
       <ul class="navbar__list">
-        <li class="navbar__item">
-          <a class="navbar__link" href="index.html">Home</a>
-        </li>
+        <li class="navbar__item"><a class="navbar__link" href="/index">Home</a></li>
         <li class="navbar__item"><a class="navbar__link" href="#">Blogs</a></li>
         <li class="navbar__item">
-          <a class="navbar__link" href="consult.html">Consult</a>
+          <a class="navbar__link" href="/consult">Consult</a>
         </li>
         <li class="navbar__item">
-          <a class="navbar__link" href="dashboard.html">My Dashboard</a>
+          <a class="navbar__link" href="/dashboard">My Dashboard</a>
         </li>
         <li class="navbar__item">
-          <a class="navbar__link" href="/signin.html">Account</a>
+          <a class="navbar__link" href="/signin">Account</a>
         </li>
       </ul>
     </nav>
 
-    <div class="consult-container">
+    <div class="category" id="category">
+      <div class="therapist">
+        <button onclick="window.location.href='/signintherapist'"><img src="/Images/therapist.png" alt=""></button>
+        <h3>Are you looking to provide therapy?</h3>
+
+      </div>
+      <div class="patient">
+        <button id="therapy-category"><img src="/Images/patient.png" alt=""></button>
+        <h3>Are you looking for therapy?</h3>
+      </div>
+    </div>
+
+    <div class="consult-container hidden" id="consult-container">
       <div class="question" id="question">
         <p>What type of therapy are you looking for?</p>
         <div class="buttons-consult">
@@ -80,19 +91,19 @@
           What is your Gender Identity?
         </div>
         <div class="individual-buttons hidden" id="individual-buttons">
-          <button class="gender_ques_btn">Man</button>
-          <button class="gender_ques_btn">Woman</button>
+          <button class="gender_ques_btn"  name="gender_ques" value="Man">Man</button>
+          <button class="gender_ques_btn" name="gender_ques" value="Woman">Woman</button>
           <button id="more-btn">More Options</button>
-          <button class="hidden gender_ques_btn more-options-btn">
+          <button class="hidden gender_ques_btn more-options-btn" name="gender_ques" value="NonBinary">
             Non Binary
           </button>
-          <button class="hidden gender_ques_btn more-options-btn">
+          <button class="hidden gender_ques_btn more-options-btn" name="gender_ques" value="Undefined">
             I don't know
           </button>
-          <button class="hidden gender_ques_btn more-options-btn">
+          <button class="hidden gender_ques_btn more-options-btn" name="gender_ques" value="Undefined">
             Prefer not to say
           </button>
-          <button class="hidden gender_ques_btn more-options-btn">Other</button>
+          <button class="hidden gender_ques_btn more-options-btn" name="gender_ques" value="Other">Other</button>
         </div>
 
         <div class="individual-question hidden" id="ques2">
@@ -106,35 +117,35 @@
           How do you identify?
         </div>
         <div class="individual-buttons hidden" id="identify-buttons">
-          <button id="straight" class="identify_ques_btn">Straight</button>
-          <button class="identify_ques_btn lgbtq-buttons">Gay</button>
-          <button class="identify_ques_btn lgbtq-buttons">Lesbian</button>
-          <button class="identify_ques_btn lgbtq-buttons">Bi/Pan</button>
-          <button class="identify_ques_btn lgbtq-buttons">
+          <button id="straight" class="identify_ques_btn" name="identify_ques" value="Straight">Straight</button>
+          <button class="identify_ques_btn lgbtq-buttons" name="identify_ques" value="Gay">Gay</button>
+          <button class="identify_ques_btn lgbtq-buttons" name="identify_ques" value="Lesbian">Lesbian</button>
+          <button class="identify_ques_btn lgbtq-buttons" name="identify_ques" value="Bi/Pan">Bi/Pan</button>
+          <button class="identify_ques_btn lgbtq-buttons" name="identify_ques" value="Undefined">
             Prefer not to say
           </button>
           <button id="more-identify-btn">More Options</button>
           <button
           
-            class="hidden identify_ques_btn more-identify-options-btn lgbtq-buttons"
+            class="hidden identify_ques_btn more-identify-options-btn lgbtq-buttons" name="identify_ques" value="Queer"
           >
             Queer
           </button>
           <button
           
-            class="hidden identify_ques_btn more-identify-options-btn lgbtq-buttons"
+            class="hidden identify_ques_btn more-identify-options-btn lgbtq-buttons" name="identify_ques" value="Asexual"
           >
             Asexual
           </button>
           <button
           
-            class="hidden identify_ques_btn more-identify-options-btn lgbtq-buttons"
+            class="hidden identify_ques_btn more-identify-options-btn lgbtq-buttons" name="identify_ques" value="Undefined"
           >
             I don't know
           </button>
           <button
           
-            class="hidden identify_ques_btn more-identify-options-btn lgbtq-buttons"
+            class="hidden identify_ques_btn more-identify-options-btn lgbtq-buttons" name="identify_ques" value="Other"
           >
             Other
           </button>
@@ -145,8 +156,8 @@
         </div>
 
         <div class="individual-buttons hidden" id="lgbtq-choice">
-          <button class="lgbtq_ques_btn">No</button>
-          <button class="lgbtq_ques_btn">Yes</button>
+          <button class="lgbtq_ques_btn" name="lgbtq_ques" value="No">No</button>
+          <button class="lgbtq_ques_btn" name="lgbtq_ques" value="Yes">Yes</button>
         </div>
 
 
@@ -154,52 +165,52 @@
           What is your relationship status?
         </div>
         <div class="individual-buttons hidden" id="relationship-choice">
-          <button class="relationship_ques_btn">Single</button>
-          <button class="relationship_ques_btn">In a relationship</button>
-          <button class="relationship_ques_btn">Married</button>
-          <button class="relationship_ques_btn">Divorced</button>
-          <button class="relationship_ques_btn">Widowed</button>
-          <button class="relationship_ques_btn">Other</button>
+          <button class="relationship_ques_btn" name="relationship_ques" value="Single">Single</button>
+          <button class="relationship_ques_btn" name="relationship_ques" value="Relationship">In a relationship</button>
+          <button class="relationship_ques_btn" name="relationship_ques" value="Married">Married</button>
+          <button class="relationship_ques_btn" name="relationship_ques" value="Divorced">Divorced</button>
+          <button class="relationship_ques_btn" name="relationship_ques" value="Widowed">Widowed</button>
+          <button class="relationship_ques_btn" name="relationship_ques" value="Other">Other</button>
         </div>
 
         <div class="individual-question hidden" id="reason-ques">
           What brings you to therapy?
         </div>
-        <div class="options hidden" id="options">
+        <div class="options hidden" id="options" >
           <div class="tickbox">
-          <input type="checkbox" name="anxiety" id="anxiety" class="options-check">
+          <input type="checkbox" name=MentalHealth" id="MentalHealth" value="anxiety" class="options-check">
           <label for="anxiety">Anxiety</label><br>
           </div>
           <div class="tickbox">
-          <input type="checkbox" name="depression" id="depression" class="options-check">
+          <input type="checkbox" name="MentalHealth" id="MentalHealth" class="options-check" value="depression" >
           <label for="depression">Depression</label><br>
         </div>
           <div class="tickbox">
-          <input type="checkbox" name="relationship-issues" id="relationship-issues" class="options-check">
+          <input type="checkbox" name="MentalHealth" id="MentalHealth" class="options-check" value="relationship-issues" >
           <label for="relationship-issues">Relationship issues</label><br>
         </div>
         <div class="tickbox">
-          <input type="checkbox" name="work-related-stress" id="work-related-stress" class="options-check">
+          <input type="checkbox" name="MentalHealth" id="MentalHealth" class="options-check" value="work-related-stress" >
           <label for="work-related-stress">Work-related stress</label><br>
         </div>
           <div class="tickbox">
-          <input type="checkbox" name="trauma" id="trauma" class="options-check">
+          <input type="checkbox" name="MentalHealth" id="MentalHealth" class="options-check" value="trauma" >
           <label for="trauma">Trauma</label><br>
         </div>
         <div class="tickbox">
-          <input type="checkbox" name="grief-and-loss" id="grief-and-loss" class="options-check">
+          <input type="checkbox" name="MentalHealth" id="MentalHealth" class="options-check" value="grief-and-loss" >
           <label for="grief-and-loss">Grief and loss</label><br>
         </div>
           <div class="tickbox">
-          <input type="checkbox" name="identity-issues" id="identity-issues" class="options-check">
+          <input type="checkbox" name="MentalHealth" id="MentalHealth" class="options-check" value="identity-issues" >
           <label for="identity-issues">Identity issues</label><br>
         </div>
         <div class="tickbox">
-          <input type="checkbox" name="self-confidence" id="self-confidence" class="options-check">
+          <input type="checkbox" name="MentalHealth" id="MentalHealth" class="options-check" value="self-confidence" >
           <label for="self-confidence">I want to gain self confidence</label><br>
         </div>
         <div class="tickbox">
-          <input type="checkbox" name="other" id="other" class="options-check">
+          <input type="checkbox" name="MentalHealth" id="MentalHealth" class="options-check" value="Other" >
           <label for="other">Other</label><br>
         </div>
         <button class="checkbox-btn" id="checkbox-btn">Next</button>
@@ -210,11 +221,11 @@
           How long have you been experiencing these symptoms?
         </div>
         <div class="individual-buttons hidden" id="duration-choice">
-          <button class="duration_ques_btn">Less than a month</button>
-          <button class="duration_ques_btn">1-3 months</button>
-          <button class="duration_ques_btn">3-6 months</button>
-          <button class="duration_ques_btn">6-12 months</button>
-          <button class="duration_ques_btn">More than a year</button>
+          <button class="duration_ques_btn" name="duration_ques" value="LessThanA_Month">Less than a month</button>
+          <button class="duration_ques_btn" name="duration_ques" value="1-3">1-3 months</button>
+          <button class="duration_ques_btn" name="duration_ques" value="3-6">3-6 months</button>
+          <button class="duration_ques_btn" name="duration_ques" value="6-12">6-12 months</button>
+          <button class="duration_ques_btn" name="duration_ques" value="MoreThanA_Year">More than a year</button>
           
         </div>
 
@@ -224,39 +235,39 @@
 
         <div class="options hidden" id="goals-options">
           <div class="tickbox">
-          <input type="checkbox" name="coping" id="coping" class="goals-check">
+          <input type="checkbox" name="goalCheck" id="goalCheck" class="goals-check" value="coping">
           <label for="coping">Developing coping mechanisms</label><br>
           </div>
           <div class="tickbox">
-          <input type="checkbox" name="communication" id="communication" class="goals-check">
+          <input type="checkbox" name="goalCheck" id="goalCheck" class="goals-check"  value="communication">
           <label for="communication">Improving communication skills</label><br>
         </div>
           <div class="tickbox">
-          <input type="checkbox" name="confidence" id="confidence" class="goals-check">
+          <input type="checkbox" name="goalCheck" id="goalCheck" class="goals-check"  value="confidence">
           <label for="confidence">Building self-esteem and confidence</label><br>
         </div>
         <div class="tickbox">
-          <input type="checkbox" name="stress" id="stress" class="goals-check">
+          <input type="checkbox" name="goalCheck" id="goalCheck" class="goals-check"  value="stress-Anxiety-Free">
           <label for="stress">Managing stress and anxiety</label><br>
         </div>
           <div class="tickbox">
-          <input type="checkbox" name="trauma" id="trauma" class="goals-check">
+          <input type="checkbox" name="goalCheck" id="goalCheck" class="goals-check" value="past-trauma">
           <label for="trauma">Overcoming past trauma</label><br>
         </div>
         <div class="tickbox">
-          <input type="checkbox" name="relationship" id="relationship" class="goals-check">
+          <input type="checkbox" name="goalCheck" id="goalCheck" class="goals-check"  value="relationship">
           <label for="relationship">Resolving relationship conflicts</label><br>
         </div>
           <div class="tickbox">
-          <input type="checkbox" name="identity-issues" id="self-awareness" class="goals-check">
+          <input type="checkbox" name="goalCheck" id="goalCheck" class="goals-check" value="self-awareness">
           <label for="self-awareness">Exploring personal growth and self-awareness</label><br>
         </div>
         <div class="tickbox">
-          <input type="checkbox" name="dont-know" id="dont-know" class="goals-check">
+          <input type="checkbox" name="goalCheck" id="goalCheck" class="goals-check" value="Undefined">
           <label for="dont-know">I don't know</label><br>
         </div>
         <div class="tickbox">
-          <input type="checkbox" name="other" id="other" class="goals-check">
+          <input type="checkbox" name="goalCheck" id="goalCheck" class="goals-check" value="Other">
           <label for="other">Other</label><br>
         </div>
         <button class="checkbox-btn" id="goals-btn">Next</button>
@@ -269,19 +280,19 @@
 
         <div class="options hidden" id="method-options">
           <div class="tickbox">
-          <input type="checkbox" name="In-person" id="In-person" class="method-check">
+          <input type="checkbox" name="Mode" id="Mode" value="In-person" class="method-check">
           <label for="In-person">In-person</label><br>
           </div>
           <div class="tickbox">
-          <input type="checkbox" name="Video-call" id="Video-call" class="method-check">
+          <input type="checkbox" name="Mode" id="Mode" value="Video-call"class="method-check">
           <label for="Video-call">Video call</label><br>
         </div>
           <div class="tickbox">
-          <input type="checkbox" name="Phone-call" id="Phone-call" class="method-check">
+          <input type="checkbox" name="Mode" id="Mode" value="Phone-call"class="method-check">
           <label for="Phone-call">Phone call</label><br>
         </div>
         <div class="tickbox">
-          <input type="checkbox" name="Messaging" id="Messaging" class="method-check">
+          <input type="checkbox" name="Mode" id="Mode" value="Messaging"class="method-check">
           <label for="Messaging">Messaging</label><br>
         </div>
         <button class="checkbox-btn" id="method-btn">Next</button>
@@ -291,8 +302,8 @@
         Have you had therapy before?
       </div>
       <div class="individual-buttons hidden" id="therapy-choice">
-        <button class="therapy_ques_btn">Yes</button>
-        <button class="therapy_ques_btn">No</button>
+        <button class="therapy_ques_btn" name="therapy_ques" value="Yes">Yes</button>
+        <button class="therapy_ques_btn" name="therapy_ques" value="No">No</button>
                 
       </div>
 
@@ -300,8 +311,8 @@
         Have you been diagnosed with a mental health condition?
       </div>
       <div class="individual-buttons hidden" id="mental-choice">
-        <button class="mental_ques_btn">Yes</button>
-        <button class="mental_ques_btn">No</button>
+        <button class="mental_ques_btn" name="mental_ques" value="Yes">Yes</button>
+        <button class="mental_ques_btn" name="mental_ques" value="No">No</button>
               
       </div>
 
@@ -309,11 +320,11 @@
         How often do you experience symptoms <br> related to your condition?
       </div>
       <div class="individual-buttons hidden" id="symptoms-choice">
-        <button class="symptoms_ques_btn">Never</button>
-        <button class="symptoms_ques_btn">Rarely</button>
-        <button class="symptoms_ques_btn">Sometimes</button>
-        <button class="symptoms_ques_btn">Often</button>
-        <button class="symptoms_ques_btn">Always</button>
+        <button class="symptoms_ques_btn" name="symptoms_ques" value="Never">Never</button>
+        <button class="symptoms_ques_btn" name="symptoms_ques" value="Rarely">Rarely</button>
+        <button class="symptoms_ques_btn" name="symptoms_ques" value="Sometimes">Sometimes</button>
+        <button class="symptoms_ques_btn" name="symptoms_ques" value="Often">Often</button>
+        <button class="symptoms_ques_btn" name="symptoms_ques" value="Always">Always</button>
       </div>
 
 
@@ -321,11 +332,11 @@
         How would you rate the severity <br> of your symptoms?
       </div>
       <div class="individual-buttons hidden" id="severity-choice">
-        <button class="severity_ques_btn">Mild</button>
-        <button class="severity_ques_btn">Moderate</button>
-        <button class="severity_ques_btn">Severe</button>
-        <button class="severity_ques_btn">Very Severe</button>
-        <button class="severity_ques_btn">No symptoms</button>
+        <button class="severity_ques_btn" name="severity_ques" value="Mild">Mild</button>
+        <button class="severity_ques_btn" name="severity_ques" value="Moderate">Moderate</button>
+        <button class="severity_ques_btn" name="severity_ques" value="Severe">Severe</button>
+        <button class="severity_ques_btn" name="severity_ques" value="Very_Severe">Very Severe</button>
+        <button class="severity_ques_btn" name="severity_ques" value="No_Symptoms">No symptoms</button>
         
       </div>
 
@@ -333,13 +344,13 @@
         Have you tried any of the following treatments or <br> therapies for your condition?
       </div>
       <div class="individual-buttons hidden" id="treatment-choice">
-        <button class="treatment_ques_btn">Medication</button>
-        <button class="treatment_ques_btn">Psychotherapy</button>
-        <button class="treatment_ques_btn">Exercise</button>
-        <button class="treatment_ques_btn">Meditation or mindfulness</button>
-        <button class="treatment_ques_btn">Dietary changes</button>
-        <button class="treatment_ques_btn">Alternative therapies</button>
-        <button class="treatment_ques_btn">No</button>
+        <button class="treatment_ques_btn" name="treatment_ques" value="Medication">Medication</button>
+        <button class="treatment_ques_btn" name="treatment_ques" value="Psychotherapy">Psychotherapy</button>
+        <button class="treatment_ques_btn" name="treatment_ques" value="Exercise">Exercise</button>
+        <button class="treatment_ques_btn" name="treatment_ques" value="Meditation_mindfulness">Meditation or mindfulness</button>
+        <button class="treatment_ques_btn" name="treatment_ques" value="Dietary_changes">Dietary changes</button>
+        <button class="treatment_ques_btn" name="treatment_ques" value="Alternative_Therapy">Alternative therapies</button>
+        <button class="treatment_ques_btn" name="treatment_ques" value="No">No</button>
         
       </div>
 
@@ -348,22 +359,23 @@
         How motivated are you to make changes <br> to manage your symptoms?
       </div>
       <div class="individual-buttons hidden" id="motivate-choice">
-        <button class="motivate_ques_btn">Not at all motivated</button>
-        <button class="motivate_ques_btn">Somewhat motivated</button>
-        <button class="motivate_ques_btn">Moderately motivated</button>
-        <button class="motivate_ques_btn">Very motivated</button>
-        <button class="motivate_ques_btn">Extremely motivated</button>
+        <button class="motivate_ques_btn" name="motivate_ques" value="Not_At_All">Not at all motivated</button>
+        <button class="motivate_ques_btn" name="motivate_ques" value="Somewhat">Somewhat motivated</button>
+        <button class="motivate_ques_btn" name="motivate_ques" value="Moderate">Moderately motivated</button>
+        <button class="motivate_ques_btn" name="motivate_ques" value="Very">Very motivated</button>
+        <button class="motivate_ques_btn" name="motivate_ques" value="Extremely">Extremely motivated</button>
         </div>
 
         <div class="individual-question hidden" id="match" style="text-align: center;">
           Let's match you to the best therapist <br> according to your preference
         </div>
         <div class="hidden" id="match-choice">
-          <button class="checkbox-btn" id="match-btn">Next</button>
+          <button class="checkbox-btn" id="match-btn" name ="finalButton SubmitButton"type="submit" value="LetsGo">Let's Go</button>
           </div>
 
       </div>
     </div>
+  </form>
 
     <footer>
       <div class="container">
@@ -425,6 +437,6 @@
 
     <script src="https://use.fontawesome.com/1744f3f671.js"></script>
 
-    <script src="consult.js"></script>
+    <script src="/javasc/consult.js"></script>
   </body>
 </html>
