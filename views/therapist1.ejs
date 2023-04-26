@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindEase | Yash Pali</title>
+    <link rel="shortcut icon" href="/Logos/MindEase-removebg.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/therapist1.css">
+</head>
+<body>
+    
+   
+      <div class="therapist">
+        <div class="introduction">
+            <img src="/Images/yashpalipic.jpeg" alt="">
+            <h2 class="name"> Yash Pali</h2>
+            <div class="intro">Hello, I'm Yash and I'm a licensed therapist with over 10 years of experience helping individuals and couples navigate through life's challenges. My approach is collaborative and solution-focused, meaning that we work together to develop practical strategies that can help you achieve your goals and improve your overall well-being.</div>
+            <div class="blob">
+                <div class="blobs">Anxiety</div>
+                <div class="blobs">Relationship</div>
+                <div class="blobs">Depression</div>
+                <div class="blobs">Grief & Loss</div>
+                
+            </div>
+        </div>
+
+        <div class="line"></div>
+        
+        <div class="appointmentmain">
+            <div class="headappointment">Select Date & Time</div>
+            <div class="appointment">
+            <div class="dates">
+                <form action="/doctorAppointment" method="post">
+                <% for(let i=0;i<DateTimeTherapist.length;i++){ %>
+                <button class="dateSlot" value="<%= DateTimeTherapist[i].Date %>" data-date="24-04-2023" name="DateRelateSlot" type="submit" ><%= DateTimeTherapist[i].Date %></button>
+                <% } %>
+                </form>
+            </div>
+            <div class="time">
+                
+                <% for(let j=0;j<TimeSlotTimes.length;j++){ %>
+                <button class="timeSlot" name="TimeSlotValue" value="<%= TimeSlotTimes[j] %>"><%= TimeSlotTimes[j] %></button>
+                <% } %>
+                <form action="/therapist11" method="post">
+                <button class="submit" name="ballepaajiii" type="submit">Book</button>
+            </form>
+            </div>
+        </div>
+        </div>
+      </div>
+
+
+
+
+    <script src="/javasc/therapist1.js"></script>
+</body>
+</html>

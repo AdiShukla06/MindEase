@@ -95,7 +95,7 @@ body{
   
   .navigation li a i {
     /* display: block; */
-    margin-bottom: 0;
+margin-bottom: 0;
     font-size: 1.1em;
   }
 
@@ -249,7 +249,7 @@ body{
   .mood-notes {
     margin-bottom: 40px;
     
-  }
+   }
   
   .mood-notes label {
     font-size: 1.2rem;
@@ -320,7 +320,7 @@ body{
     width: 45vw;
     height: 8em;
     background-size: cover;
-    background-color: rgba(255, 255, 255, 0.712);
+    background-color: rgba(255, 255, 255, 0.242);
     background-blend-mode: lighten;
     font-family: 'inter', sans-serif;
     font-size: 2em;
@@ -352,7 +352,7 @@ body{
     width: 20vw;
     height: 13.4em;
     background-size: cover;
-    background-color: rgba(255, 255, 255, 0.826);
+    background-color: rgba(255, 255, 255, 0.66);
     background-blend-mode: lighten;
     font-family: 'inter', sans-serif;
     font-size: 1.2em;
@@ -384,7 +384,7 @@ body{
     height: 8em;
     margin: 0.5em 2.2em;
     background-size: cover;
-    background-color: rgba(255, 255, 255, 0.712);
+    background-color: rgba(255, 255, 255, 0.235);
     background-blend-mode: lighten;
     font-family: 'inter', sans-serif;
     font-size: 2em;

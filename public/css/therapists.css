@@ -129,7 +129,8 @@ body{
   .appointments-container {
     margin-top: 20px;
   }
-  
+
+
   .appointments-container h3
   {
     font-size: 1.5em;
@@ -389,6 +390,10 @@ body{
         font-family: 'inter', sans-serif;
       }
       
+
+      .hidden{
+        display: none;
+      }
 
 
   footer {

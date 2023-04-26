@@ -1,0 +1,175 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar | MindEase</title>
+    <link
+      rel="shortcut icon"
+      href="/Logos/MindEase-removebg.png"
+      type="image/x-icon"
+    />
+
+    <script src="https://source.zoom.us/1.9.0/lib/vendor/react.min.js"></script>
+  <script src="https://source.zoom.us/1.9.0/lib/vendor/react-dom.min.js"></script>
+  <script src="https://source.zoom.us/1.9.0/lib/vendor/redux.min.js"></script>
+  <script src="https://source.zoom.us/1.9.0/lib/vendor/redux-thunk.min.js"></script>
+  <script src="https://source.zoom.us/1.9.0/lib/vendor/lodash.min.js"></script>
+  <script src="https://source.zoom.us/zoom-meeting-1.9.0.min.js"></script>
+
+
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="/css/calendar.css" />
+  </head>
+  <body>
+    
+
+    <section>
+      <div class="navigation" id="mySidenav">
+        <ul>
+          <li>
+            <a href="/dashboards"><i class="fi fi-sr-home"></i> </a>
+            <a href="/dashboards"><span>Home</span> </a>
+          </li>
+          <li>
+            <a href="/to-do-list"><i class="fi fi-br-list-check"></i> </a>
+            <a href="/to-do-list"><span>To-do list</span></a>
+          </li>
+          <li class="current">
+            <a href="/calendars"><i class="fa fa-calendar"></i> </a>
+            <a href="/calendars"><span>Appointments</span></a>
+          </li>
+          <li>
+            <a href="/consult"><i class="fi fi-sr-star"></i> </a>
+            <a href="/consult"><span>Consult</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fi fi-bs-search"></i> </a>
+            <a href="#"><span>Search</span></a>
+          </li>
+
+          <li>
+            <a href="#"><i class="fi fi-sr-settings"></i> </a>
+            <a href="#"><span>Settings</span></a>
+          </li>
+          <li>
+            <a href="/"><i class="fi fi-br-exit"></i> </a>
+            <a href="/"><span>Exit</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="maincontainer" id="mymainnav">
+        <div class="head">
+          <img class="profile" src="/Images/profile.png" alt="">
+          <!-- <div class="heading">Hello <br><span>Aditya!</span></div> -->
+          <div class="heading">Hello <br><span><%= NameofBalle %></span></div>
+          <!-- <a href="#" style="text-decoration: none"
+            ><i class="fi fi-ss-bell"></i
+          ></a> -->
+        </div>
+
+        <div class="appointments-container">
+          <h2>My Appointments</h2>
+
+          <div class="upcoming-appointments">
+            <h3>Pending Appointments</h3>
+            <ul>
+              <li class="appointments">
+                <p>No pending appointments</p>
+                
+              </li>
+              <!-- <li class="appointments">
+                <p>Therapist: Aditya Shukla</p>
+                <p>Date: 2023-05-12</p>
+                <p>Time: 3:00 PM - 4:00 PM</p>
+                <button class="cancel-appointment-btn">Cancel</button>
+              </li> -->
+              <!-- add more upcoming appointments here -->
+            </ul>
+          </div>
+
+
+          <div class="upcoming-appointments">
+            <h3>Upcoming Appointments</h3>
+            <ul>
+              <li class="appointments">
+              <p>Therapist: Yash Pali</p>
+                <p>Date: 2023-04-27</p>
+                <p>Time: 09:00 AM - 11:00 AM</p>
+                <!-- <button class="meetme" onclick="startMeeting()">Join meeting with me</button> -->
+              </li>
+              <!-- <li class="appointments">
+                <p>Therapist: Yash Pali</p>
+                <p>Date: 2023-05-10</p>
+                <p>Time: 10:00 AM - 11:00 AM</p>
+                <a href="#" class="join-meeting-link" data-meeting-id="zoom_12345">Join Meeting</a>
+                <button class="cancel-appointment-btn">Cancel</button>
+              </li>
+              <li class="appointments">
+                <p>Therapist: Aditya Shukla</p>
+                <p>Date: 2023-05-12</p>
+                <p>Time: 3:00 PM - 4:00 PM</p>
+                <button class="cancel-appointment-btn">Cancel</button>
+              </li> -->
+              <!-- add more upcoming appointments here -->
+            </ul>
+          </div>
+          <div class="past-appointments">
+            <h3>Past Appointments</h3>
+            <ul>
+              <li class="appointments">
+                <p>Therapist: Digant Chaubey</p>
+                <p>Date: 2023-04-20</p>
+                <p>Time: 2:00 PM - 3:00 PM</p>
+                <button class="view-feedback-btn">View Feedback</button>
+              </li>
+              <li class="appointments">
+                <p>Therapist: Divakar Jaiswal</p>
+                <p>Date: 2023-04-15</p>
+                <p>Time: 11:00 AM - 12:00 PM</p>
+                <button class="view-feedback-btn">View Feedback</button>
+              </li>
+              <!-- add more past appointments here -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script> -->
+
+    <script src="/javasc/calendar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+  </body>
+</html>

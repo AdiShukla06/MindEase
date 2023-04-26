@@ -28,8 +28,8 @@
       </div>
       
       <ul class="navbar__list">
-        <li class="navbar__item"><a class="navbar__link" href="/index">Home</a></li>
-        <li class="navbar__item"><a class="navbar__link" href="#">Blogs</a></li>
+        <li class="navbar_item"><a class="navbar__link" href="index" >Home</a></li>
+        <li class="navbar_item"><a class="navbar__link" href="#">Blogs</a></li>
         <li class="navbar__item">
           <a class="navbar__link" href="/consult">Consult</a>
         </li>
@@ -45,7 +45,7 @@
     <div class="form-container">
       <div class="sign-up-form">
         <h2 class="signup-heading">Sign Up</h2>
-        <form id="signup-form" action="#">
+        <form  action="/signup" method="POST">
           <div class="form-control">
             <label for="name">Name</label>
             <input class="signup-input" type="text" id="name" name="name" required>
@@ -60,7 +60,7 @@
           </div>
           <div class="form-control">
             <label for="confirm-password">Confirm Password</label>
-            <input class="signup-input" type="password" id="confirm-password" name="confirm-password" required>
+            <input class="signup-input" type="password" id="confirm_password" name="confirm_password" required>
           </div>
           <div class="form-control">
             <label for="birthdate">Birthdate</label>
@@ -69,7 +69,7 @@
           <div class="form-control">
             <label for="gender">Gender</label>
             <select id="gender" name="gender">
-              <option value="male">Male</option>
+              <option value="male" >Male</option>
               <option value="female">Female</option>
               <option value="other">Other</option>
             </select>

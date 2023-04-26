@@ -119,3 +119,29 @@ window.onload = function() {
 			
 		})
 }
+
+const blogbtn = document.getElementById("blogbutton");
+blogbtn.addEventListener("click", function(){
+    window.open("/blogs", "_blank");
+})
+const getstartedbtn = document.getElementById("getstartedbtn");
+getstartedbtn.addEventListener("click", function(){
+    window.open("/consult", "_blank");
+})
+const consultbtn = document.getElementById("consultbtn");
+consultbtn.addEventListener("click", function(){
+    window.open("/consults");
+})
+const trackhealthbtn = document.getElementById("trackhealthbtn");
+trackhealthbtn.addEventListener("click", function(){
+    window.open("/signin", "_blank");
+})
+const resourcebtn = document.getElementById("resourcebtn");
+resourcebtn.addEventListener("click", function(){
+    window.open("/blogs", "_blank");
+})
+const counselingbtn = document.getElementById("counselingbtn");
+counselingbtn.addEventListener("click", function(){
+    window.open("/signin", "_blank");
+})
+

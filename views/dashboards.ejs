@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do | MindEase</title>
+    <title>My Dashboard | MindEase</title>
     <link
       rel="shortcut icon"
       href="/Logos/MindEase-removebg.png"
@@ -35,25 +35,25 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-    <link rel="stylesheet" href="/css/to-do-list.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
   </head>
-  <body onload="loadList()">
+  <body>
     
 
     <section>
       <div class="navigation" id="mySidenav">
         <ul>
-          <li>
-            <a href="/dashboards"><i class="fi fi-sr-home"></i> </a>
-            <a href="/dashboards"><span>Home</span> </a>
-          </li>
           <li class="current">
+            <a href="/dashboard"><i class="fi fi-sr-home"></i> </a>
+            <a href="/dashboard"><span>Home</span> </a>
+          </li>
+          <li>
             <a href="/to-do-list"><i class="fi fi-br-list-check"></i> </a>
             <a href="/to-do-list"><span>To-do list</span></a>
           </li>
-          <li >
-            <a href="/calendar"><i class="fa fa-calendar"></i> </a>
-            <a href="/calendar"><span>Appointments</span></a>
+          <li>
+            <a href="/calendars"><i class="fa fa-calendar"></i> </a>
+            <a href="/calendars"><span>Appointments</span></a>
           </li>
           <li>
             <a href="/consult"><i class="fi fi-sr-star"></i> </a>
@@ -78,23 +78,51 @@
       <div class="maincontainer" id="mymainnav">
         <div class="head">
           <img class="profile" src="/Images/profile.png" alt="">
-          <div class="heading">Hello <br><span>Aditya!</span></div>
+          <!-- <div class="heading">Hello <br><span>Aditya!</span></div> -->
+          <div class="heading">Hello <br><span><%= NameofClient %></span></div>
           <!-- <a href="#" style="text-decoration: none"
             ><i class="fi fi-ss-bell"></i
           ></a> -->
         </div>
-        <div class="header">
-          <h1>Let's Plan <span>Things</span></h1>
-        </div>
-        <div class="main">
-          <div class="input">
-            <input type="text" id="todo" placeholder="Add new to-do item..." />
-            <button id="add" onclick="addItem()">Add</button>
+        <div class="mood-tracker hidden" id="mood-tracker">
+          <!-- <h2>Daily Mood Tracker</h2> -->
+          <p>How are you feeling today?</p>
+          <div class="mood-icons">
+            <button class="mood-icon" data-mood="happy">
+              <i class="i-happy"></i>
+              <span>Happy</span>
+            </button>
+            <button class="mood-icon" data-mood="excited">
+              <i class="i-excited"></i>
+              <span>Excited</span>
+            </button>
+            <button class="mood-icon" data-mood="neutral">
+              <i class="i-neutral"></i>
+              <span>Neutral</span>
+            </button>
+            <button class="mood-icon" data-mood="sad">
+              <i class="i-sad"></i>
+              <span>Sad</span>
+            </button>
+            <button class="mood-icon" data-mood="angry">
+              <i class="i-angry"></i>
+              <span>Angry</span>
+            </button>
           </div>
-          <div class="list">
-            <ul id="todolist"></ul>
+          <div class="mood-notes">
+            <label for="notes">Additional Notes:</label>
+            <textarea id="notes" placeholder="Optional"></textarea>
           </div>
+          <button id="submit-btn" class="submit-btn">Submit</button>
         </div>
+      
+        
+
+        <div class="dashbox">
+        <button id="bookbtn" onclick="window.location.href='/consult'" class="book-a-session">Our Experts <br> <span class="subhead"> Book a Session today & feel better </span></button>
+        <button class="mood" id="moodbtn">How are you feeling today?</button>
+      </div>
+        <button id="blogbtn" class="blog" onclick="window.location.href='/blogs'">Know about mental health <br><span class="subhead"> Learn & Grow | Know mental health, Know you </span></button>
       </div>
     </section>
 
@@ -102,6 +130,6 @@
 
     <script src="https://use.fontawesome.com/1744f3f671.js"></script>
 
-    <script src="/javasc/to-do-list.js"></script>
+    <script src="/javasc/dashboard.js"></script>
   </body>
 </html>

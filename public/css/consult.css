@@ -188,7 +188,25 @@ body{
     margin: 1em 0em;
   }
 
-  .individual-question, .individual-buttons, .checkbox-btn, .options {
+  .individual-question, .individual-buttons, .checkbox-btn, .options , .couplebtn{
+    animation: fade 0.5s;
+  }
+
+  .couplequesbox, .teenquesbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8em;
+  }
+
+  .coupleques, .teenques{
+    font-family: "inter", sans-serif;
+    font-size: 2em;
+    margin: 1em 0em;
+  }
+
+  .coupleques, .couplebtns, .checkbox-btn, .options , .teenques{
     animation: fade 0.5s;
   }
   
@@ -200,6 +218,58 @@ body{
       opacity: 1;
     }
   }
+
+
+  .couplebtns, .teenbtns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.8em;
+  }
+
+  .couplebtns button{
+    font-family: 'inter', sans-serif;
+    margin: 0.7em;
+    width: 25em;
+    height: 3em;
+    background-color: #1c78db;
+    border: none;
+    border-radius: 1.4em;
+    font-size: 1em;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .couplebtns button:hover{
+    scale: 1.1;
+  }
+
+  .couplebtns button img{
+    width: 15em;
+  }
+  .teenbtns button{
+    font-family: 'inter', sans-serif;
+    margin: 0.7em;
+    width: 25em;
+    height: 3em;
+    background-color: #1c78db;
+    border: none;
+    border-radius: 1.4em;
+    font-size: 1em;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .teenbtns button:hover{
+    scale: 1.1;
+  }
+
+  /* .teenbtns button img{
+    width: 15em;
+  } */
 
 
 

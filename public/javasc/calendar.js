@@ -39,29 +39,84 @@ function viewFeedback(event) {
   alert("Feedback for this appointment is: Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
 }
 
-const apiKey = '6KsUGSq6T-e6rMB8xCOpNA';
-const apiSecret = 'OiH7Nss1K3wfNmhIe5eZcgkHzGbOSStj7U7w';
+// const ZoomMtg = window.ZoomMtg;
+// ZoomMtg.setZoomJSLib('https://source.zoom.us/1.9.0/lib', '/av');
+// ZoomMtg.preLoadWasm();
+// ZoomMtg.prepareJssdk();
+
+// const apiKey = '6KsUGSq6T-e6rMB8xCOpNA';
+// const apiSecret = 'OiH7Nss1K3wfNmhIe5eZcgkHzGbOSStj7U7w';
+
+// const meetConfig = {
+//   apiKey,
+//   apiSecret,
+//   userName: 'Aditya Shukla',
+//   userEmail: 'aditya.vishwabharati@gmail.com',
+//   meetingNumber: '460 037 1485',
+//   leaveUrl: 'https://www.google.co.in/',
+//   role: 0
+// };
+
+// const signature = ZoomMtg.generateSignature({
+//   meetingNumber: meetConfig.meetingNumber,
+//   apiKey: meetConfig.apiKey,
+//   apiSecret: meetConfig.apiSecret,
+//   role: meetConfig.role,
+//   success: function(res){
+//     console.log(res.result);
+//   }
+// });
 
 
-// Add click event listener to each join meeting link
-const joinMeetingLinks = document.querySelectorAll('.join-meeting-link');
-joinMeetingLinks.forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    const meetingId = this.getAttribute('data-meeting-id');
-    const url = `https://zoom.us/wc/${meetingId}/join?prefer=1&un=`;
-    const signature = generateZoomSignature(apiKey, apiSecret, url);
-    window.location.href = `${url}&signature=${signature}`;
-  });
-});
+// ZoomMtg.init({
+//   leaveUrl: meetConfig.leaveUrl,
+//   isSupportAV: true,
+//   success: function () {
+//     ZoomMtg.join({
+//       signature: signature,
+//       meetingNumber: meetConfig.meetingNumber,
+//       userName: meetConfig.userName,
+//       apiKey: meetConfig.apiKey,
+//       userEmail: meetConfig.userEmail,
+//       passWord: '1234',
+//       success: function(res){
+//         console.log('join meeting success');
+//       },
+//       error: function(res) {
+//         console.log(res);
+//       }
+//     });
+//   },
+//   error: function(res) {
+//     console.log(res);
+//   }
+// });
 
-// Generate Zoom signature using API key, secret, and meeting URL
-function generateZoomSignature(apiKey, apiSecret, meetingNumber, role) {
-  const timestamp = new Date().getTime() - 30000;
-  const msg = new TextEncoder().encode(apiKey + meetingNumber + timestamp + role);
-  const hash = crypto.createHmac('sha256', apiSecret).update(msg).digest();
-  const signature = `${apiKey}.${meetingNumber}.${timestamp}.${role}.${Buffer.from(hash).toString('base64')}`;
-  return signature;
-}
+// function startMeeting() {
+//   ZoomMtg.init({
+//   leaveUrl: meetConfig.leaveUrl,
+//   isSupportAV: true,
+//   success: function () {
+//   ZoomMtg.join({
+//   signature: signature,
+//   meetingNumber: meetConfig.meetingNumber,
+//   userName: meetConfig.userName,
+//   apiKey: meetConfig.apiKey,
+//   userEmail: meetConfig.userEmail,
+//   passWord: '1234',
+//   success: function(res){
+//   console.log('join meeting success');
+//   },
+//   error: function(res) {
+//   console.log(res);
+//   }
+//   });
+//   },
+//   error: function(res) {
+//   console.log(res);
+//   }
+//   });
+//   }
+
 
 

@@ -45,7 +45,7 @@ setTimeout(() => {
   window.location.href = "/dashboard";
 }, 1500);
 } else {
-  alert("Please select a date and time slot.");
+  console.log("wohoooooo");
   }
   });
 
